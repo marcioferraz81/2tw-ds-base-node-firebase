@@ -15,7 +15,17 @@ async function listar() {
     }));
 }
 
+//salvar
+async function salvar(categoria) {
+    let novoRegistro = ref.push();
+
+    await novoRegistro.set({
+        nome: categoria.nome
+    });
+}
+
 //exportar
 module.exports = {
-    listar
+    listar,
+    salvar
 };

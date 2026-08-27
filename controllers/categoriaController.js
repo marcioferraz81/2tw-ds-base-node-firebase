@@ -9,3 +9,12 @@ exports.index = async (req, res) => {
         categoriaEditar: null
     });
 };
+
+//salvar
+exports.salvar = async (req, res) => {
+    await model.salvar({
+        nome: req.body.nome.toUpperCase()
+    });
+
+    res.redirect("/categorias");
+};

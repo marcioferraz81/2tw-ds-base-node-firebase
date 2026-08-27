@@ -4,5 +4,6 @@ const router = express.Router();
 const controller = require("../controllers/categoriaController");
 
 router.get("/", controller.index);
+router.post("/salvar", controller.salvar);
 
 module.exports = router;
